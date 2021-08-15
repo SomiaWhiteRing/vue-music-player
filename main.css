@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "iconfont"; /* project id 1622128 */
+    src: url("http://at.alicdn.com/t/font_1622128_z6hlqa9uqe.eot");
+    src: url("http://at.alicdn.com/t/font_1622128_z6hlqa9uqe.eot?#iefix")
+        format("embedded-opentype"),
+      url("http://at.alicdn.com/t/font_1622128_z6hlqa9uqe.woff2")
+        format("woff2"),
+      url("http://at.alicdn.com/t/font_1622128_z6hlqa9uqe.woff")
+        format("woff"),
+      url("http://at.alicdn.com/t/font_1622128_z6hlqa9uqe.ttf")
+        format("truetype"),
+      url("http://at.alicdn.com/t/font_1622128_z6hlqa9uqe.svg#iconfont")
+        format("svg");
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 50px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    transform: scale(0.5);
+    transform-origin: left top;
+    width: 720px;
+    height: 1280px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(15px);
+    transform: scale(1.1);
+  }
+  
+  .blur {
+    filter: blur(100px);
+  }
+  
+  .music-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .topBar {
+    margin: 0 4%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    color: #fefffe;
+  }
+  
+  .topBar .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .topBar .info .author {
+    color: #e5e4e3;
+    font-size: 28px;
+  }
+  
+  .topBar .share i {
+    font-size: 60px;
+  }
+  
+  .main {
+    margin: 0 4%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+  }
+  
+  .main .CD {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 50%;
+    background: center;
+  }
+  
+  .progress {
+    color: #8e857b;
+    font-size: 20px;
+    margin: 0 4%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progress .progress-line {
+    width: 75%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #8e857b;
+  }
+  
+  .progress .progress-line .already-line {
+    width: 50%;
+    position: absolute;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #a9a39c;
+  }
+  .progress .progress-line .play-point {
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fefffe;
+  }
+  
+  .progress .progress-line .whole-line {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #8c8379;
+  }
+  
+  .toolBar {
+    color: #fefffe;
+    margin: 0 4%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

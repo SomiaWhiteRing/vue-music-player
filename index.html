@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  type="text/css" href="main.css">
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 背景图片 -->
+    <div
+      class="bg"
+      style="background-image: url(https://static.xhxly.cn//1uPIAS.jpg)"
+    ></div>
+    <div
+      class="bg blur"
+      style="background-image: url(https://static.xhxly.cn//1uPIAS.jpg)"
+    ></div>
+  
+    <!-- 音乐播放器主体结构 -->
+    <div class="music-wrapper">
+      <!-- 顶部栏 -->
+      <div class="topBar">
+        <div class="back"><i class="iconfont">&#xe61e;</i></div>
+        <!-- 歌曲信息 -->
+        <div class="info">
+          <!-- 标题 -->
+          <div class="title">
+            title
+          </div>
+          <!-- 作者 -->
+          <div class="author">
+            author
+          </div>
+        </div>
+        <div class="share"><i class="iconfont share">&#xe639;</i></div>
+      </div>
+  
+      <!-- CD封面 -->
+      <div class="main">
+        <div
+          class="CD"
+          style="background-image: url(https://static.xhxly.cn//1uPIAS.jpg)"
+        ></div>
+      </div>
+  
+      <!-- 进度条 -->
+      <div class="progress">
+        <div class="curTime">00:00</div>
+        <div class="progress-line">
+          <div class="whole-line"></div>
+          <div class="already-line"></div>
+          <div class="play-point"></div>
+        </div>
+        <div class="AllTime">00:00</div>
+      </div>
+  
+      <!-- 底部控制条 -->
+      <div class="toolBar">
+        <div class="heart"><i class="iconfont share">&#xe68d;</i></div>
+        <div class="last"><i class="iconfont share">&#xe6e1;</i></div>
+        <div class="play"><i class="iconfont share">&#xe6ce;</i></div>
+        <div class="next"><i class="iconfont share">&#xe718;</i></div>
+        <div class="list"><i class="iconfont share">&#xe6d3;</i></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+  
