@@ -47,17 +47,17 @@
       </div>
 
       <!-- 播放音乐 -->
-      <audio ref="player" v-bind:src="src"></audio>
+      <audio ref="player" :src="src" @canplay="handleCanPlay" @timeupdate="handleTimeUpdate"></audio>
   
       <!-- 进度条 -->
       <div class="progress">
-        <div class="curTime">00:00</div>
+        <div class="curTime">{{transferSecToTime(audio.currentTime)}}</div>
         <div class="progress-line">
           <div class="whole-line"></div>
-          <div class="already-line"></div>
-          <div class="play-point"></div>
+          <div class="already-line" :style='"width:" + progress + "%"'></div>
+          <div class="play-point" :style='"left:" + progress + "%"'></div>
         </div>
-        <div class="AllTime">00:00</div>
+        <div class="AllTime">{{transferSecToTime(audio.duration)}}</div>
       </div>
   
       <!-- 底部控制条 -->

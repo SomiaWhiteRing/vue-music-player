@@ -15,18 +15,34 @@ const vm = new Vue({
       rotateDeg:0,
       //定时器变量
       timeSet:0,
+      //音乐信息
+      audio:{
+        duration:0,
+        currentTime:0
+      }
+    },
+    computed:{
+      progress(){
+        var currentTime = this.audio.currentTime;
+        var duration = this.audio.duration;
+        var progress = (currentTime/duration)*100;
+        return progress;
+      }
     },
     methods: {
+      //按下播放键播放音乐
       playMusic(){
         this.$refs.player.play();
         this.isPlaying = true;
         this.startRotate();
       },
+      //按下暂停键暂停音乐
       pauseMusic(){
         this.$refs.player.pause();
         this.isPlaying = false;
         this.stopRotate();
       },
+      //使CD封面开始旋转
       startRotate(){
         var rotateTimes = 5;
         var rotateSteps = 0.08;
@@ -36,8 +52,35 @@ const vm = new Vue({
         },rotateTimes);
         this.clockNum = clockNum;
       },
+      //使CD封面停止旋转
       stopRotate(){
         clearInterval(this.clockNum);
       },
+      //准备进度条与时长
+      handleCanPlay(event){
+        this.audio.duration = event.target.duration;
+      },
+      //实时检测播放进度
+      handleTimeUpdate(event){
+        this.audio.currentTime = event.target.currentTime;
+      },
+      //将时间格式转换为分秒制
+      transferSecToTime(time) {
+        var tempTime = Math.floor(time);
+        var min = 0;
+        var sec = 0;
+      
+        if (tempTime > 60) {
+          min = Math.floor(tempTime / 60);
+          sec = tempTime % 60;
+        } else {
+          sec = tempTime;
+        }
+      
+        if (min < 10) min = '0' + min
+        if (sec < 10) sec = '0' + sec
+      
+        return min + ':' + sec
+      }
     },
   })
