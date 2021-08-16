@@ -41,12 +41,13 @@
       <div class="main">
         <div
           class="CD"
-          style="background-image: url(https://static.xhxly.cn//1uPIAS.jpg)"
+					:style="'background-image: url(' + bgurl + ');\
+					transform: rotate(' + rotateDeg + 'deg)'"
         ></div>
       </div>
 
       <!-- 播放音乐 -->
-      <audio id="player" ref="player" v-bind:src="src"></audio>
+      <audio ref="player" v-bind:src="src"></audio>
   
       <!-- 进度条 -->
       <div class="progress">
