@@ -44,6 +44,9 @@
           style="background-image: url(https://static.xhxly.cn//1uPIAS.jpg)"
         ></div>
       </div>
+
+      <!-- 播放音乐 -->
+      <audio id="player" ref="player" v-bind:src="src"></audio>
   
       <!-- 进度条 -->
       <div class="progress">
@@ -60,7 +63,8 @@
       <div class="toolBar">
         <div class="heart"><i class="iconfont share">&#xe68d;</i></div>
         <div class="last"><i class="iconfont share">&#xe6e1;</i></div>
-        <div class="play"><i class="iconfont share">&#xe6ce;</i></div>
+        <div class="play" v-if="!isPlaying" v-on:click="playMusic"><i class="iconfont share">&#xe6ce;</i></div>
+        <div class="pause" v-if="isPlaying" v-on:click="pauseMusic"><i class="iconfont share">&#xe643;</i></div>
         <div class="next"><i class="iconfont share">&#xe718;</i></div>
         <div class="list"><i class="iconfont share">&#xe6d3;</i></div>
       </div>
