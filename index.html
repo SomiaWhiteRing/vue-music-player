@@ -4,6 +4,9 @@
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js" defer></script>
+	<!-- 引入elementUI -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<script src="https://unpkg.com/element-ui/lib/index.js" defer></script>
   <title>Document</title>
 </head>
 <body>
@@ -92,8 +95,10 @@
 					</div>
 				</div>
 				<div class="comment-pub">
-					<input v-model="inputtedComment" placeholder="说点什么吧"> </input>
-					<div class="pub-button" @click="addComment">发送</div>
+					<!-- <input v-model="inputtedComment" placeholder="说点什么吧"> </input> -->
+					<el-input v-model="inputtedComment" @change="addComment" placeholder="说点什么吧"></el-input>
+					<!-- <div class="pub-button" @click="addComment">发送</div> -->
+					<el-button type="primary" icon="el-icon-s-promotion" @click="addComment">发送</el-button>
 				</div>
 			</div>
 			
