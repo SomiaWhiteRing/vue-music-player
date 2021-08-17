@@ -22,7 +22,7 @@ const vm = new Vue({
       },
       //评论区展开状态
       isVisible:false,
-      //评论区资源内容
+      //评论区预设内容
       comments :[{
         name:"旻",
         createdAt:"2021/08/08",
@@ -36,6 +36,8 @@ const vm = new Vue({
         createdAt:"2017/09/22",
         comment:"呵呵",
       }],
+      //评论内容
+      inputtedComment:""
     },
     computed:{
       //计算音乐播放百分比
@@ -98,6 +100,16 @@ const vm = new Vue({
         if (sec < 10) sec = '0' + sec
       
         return min + ':' + sec
-      }
+      },
+      addComment(){
+        var name = "tester";
+        var createdAt = new Date().toLocaleDateString();
+        this.comments.push({
+          name : name,
+          createdAt : createdAt,
+          comment : this.inputtedComment,
+        });
+        this.inputtedComment = '';
+      },
     },
   })

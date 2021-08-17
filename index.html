@@ -91,6 +91,10 @@
 						{{comment.comment}}
 					</div>
 				</div>
+				<div class="comment-pub">
+					<input v-model="inputtedComment" placeholder="说点什么吧"> </input>
+					<div class="pub-button" @click="addComment">发送</div>
+				</div>
 			</div>
 			
     </div>

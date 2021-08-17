@@ -210,3 +210,35 @@
     font-size: 36px;
     color: #b19c9c;
   }
+  
+  .comment-pub {
+    width: 92%;
+    position: absolute;
+    display: flex;
+    background-color: #1c1b1e;
+    padding: 0 4%;
+    height: 80px;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .comment-pub input {
+    width: 70%;
+    height: 100%;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background-color: #1c1b1e;
+    color: #757575;
+  }
+
+  .comment-pub .pub-button {
+    cursor: pointer;
+    display: flex;
+    color: #464648;
+    align-items: center;
+    height: 100%;
+    font-size: 30px;
+    color: #a9a39c;
+  }
