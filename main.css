@@ -151,3 +151,62 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .comment-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .comment-list__back {
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  
+  .comment-list__back i {
+    font-size: 48px;
+    color: white;
+    margin-left: 20px;
+  }
+  
+  .comment-list__count {
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+  }
+  
+  .comment-list__item {
+    padding: 0 20px 20px;
+    color: white;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+  }
+  
+  .comment-list__item:first-child {
+    padding-top: 20px;
+  }
+  
+  .comment-list__item-meta {
+    margin-bottom: 10px;
+  }
+  
+  .comment-list__item-meta__name {
+    font-size: 36px;
+  }
+  
+  .comment-list__item-meta__date {
+    font-size: 24px;
+    color: #b19c9c;
+  }
+  
+  .comment-list__item-comment {
+    font-size: 36px;
+    color: #b19c9c;
+  }

@@ -67,8 +67,32 @@
         <div class="play" v-if="!isPlaying" v-on:click="playMusic"><i class="iconfont share">&#xe6ce;</i></div>
         <div class="pause" v-if="isPlaying" v-on:click="pauseMusic"><i class="iconfont share">&#xe643;</i></div>
         <div class="next"><i class="iconfont share">&#xe718;</i></div>
-        <div class="list"><i class="iconfont share">&#xe6d3;</i></div>
+        <div class="list" @click="isVisible=true"><i class="iconfont share">&#xe6d3;</i></div>
       </div>
+
+			<!-- 评论列表 -->
+			<div class="comment-list" v-if="isVisible">
+				<div class="comment-list__back" @click="isVisible=false">
+					<i class="iconfont">&#xe61e;</i>
+				</div>
+				<div class="comment-list__count">
+					评论（{{comments.length}}）
+				</div>
+				<div class="comment-list__item" v-for="comment in comments">
+					<div class="comment-list__item-meta">
+						<div class="comment-list__item-meta__name">
+							{{comment.name}}
+						</div>
+						<div class="comment-list__item-meta__date">
+							{{comment.createdAt}}
+						</div>
+					</div>
+					<div class="comment-list__item-comment">
+						{{comment.comment}}
+					</div>
+				</div>
+			</div>
+			
     </div>
   </div>
 </body>

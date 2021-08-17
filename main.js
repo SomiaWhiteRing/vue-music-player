@@ -19,9 +19,26 @@ const vm = new Vue({
       audio:{
         duration:0,
         currentTime:0
-      }
+      },
+      //评论区展开状态
+      isVisible:false,
+      //评论区资源内容
+      comments :[{
+        name:"旻",
+        createdAt:"2021/08/08",
+        comment:"笑了",
+      },{
+        name:"肠炎",
+        createdAt:"2011/08/15",
+        comment:"感人",
+      },{
+        name:"走了",
+        createdAt:"2017/09/22",
+        comment:"呵呵",
+      }],
     },
     computed:{
+      //计算音乐播放百分比
       progress(){
         var currentTime = this.audio.currentTime;
         var duration = this.audio.duration;
